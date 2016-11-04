@@ -1,0 +1,124 @@
+.wrapper {
+	width: 820px;
+	height: 820px;
+	background-color: #e6cbae;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+.desk {
+	width: 802px;
+	height: 802px;
+	background-color: #0F0A05;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border: 1px solid #0f0a05;
+}
+/* style for div in div.desk */
+.desk > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 800px;
+	height: 100px;
+}
+/* style for div in div in div.desk */
+.desk > div > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+}
+/* style for rows */
+.desk > div:nth-child(2) {
+	top: 100px;
+}
+.desk > div:nth-child(3) {
+	top: 200px;
+}
+.desk > div:nth-child(4) {
+	top: 300px;
+}
+.desk > div:nth-child(5) {
+	top: 400px;
+}
+.desk > div:nth-child(6) {
+	top: 500px;
+}
+.desk > div:nth-child(7) {
+	top: 600px;
+}
+.desk > div:nth-child(8) {
+	top: 700px;
+}
+/* end style for rows */
+
+/* style for cells */
+.desk div > div:nth-child(2) {
+	left: 100px;
+}
+.desk div > div:nth-child(3) {
+	left: 200px;
+}
+.desk div > div:nth-child(4) {
+	left: 300px;
+}
+.desk div > div:nth-child(5) {
+	left: 400px;
+}
+.desk div > div:nth-child(6) {
+	left: 500px;
+}
+.desk div > div:nth-child(7) {
+	left: 600px;
+}
+.desk div > div:nth-child(8) {
+	left: 700px;
+}
+/* end style for cells */
+
+.desk > div:nth-child(odd) div:nth-child(even),
+.desk > div:nth-child(even) div:nth-child(odd) {
+	background-color: #FFF;
+}
+
+/* add black checkers */
+.desk div:nth-child(1) div:nth-child(odd):after,
+.desk div:nth-child(2) div:nth-child(even):after,
+.desk div:nth-child(3) div:nth-child(odd):after {
+	content: '';
+	background-color: #392A25;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+/* add red checkers */
+.desk div:nth-child(6) div:nth-last-child(odd):after,
+.desk div:nth-child(7) div:nth-last-child(even):after,
+.desk div:nth-child(8) div:nth-last-child(odd):after {
+	content: '';
+	background-color: #B31B28;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
